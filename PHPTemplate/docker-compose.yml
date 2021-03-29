@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  php-template:
+    build: .
+    volumes:
+      - ./php:/var/www/html
+    ports:
+      - 80:80
+volumes:
+  files:
