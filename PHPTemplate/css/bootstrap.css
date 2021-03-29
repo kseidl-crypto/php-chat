@@ -1,0 +1,139 @@
+/* Column und Row definiert*/
+.col{
+    float: left;
+    width:50%;
+    padding: 10px;
+}
+.row {
+    content: "";
+    display: flex;
+    clear: both;
+    border: 1.5px solid #ababab;
+  }
+.rowh{
+    display: none;
+}
+.rowh2{
+    display: none;
+}
+
+/* Bild soll bestimmt groß und zentriert sein*/
+
+.bildVideo{
+    height: 350px;
+   margin-left: 25%;
+  
+    
+}
+
+h3{
+    display: none;
+}
+
+/*Footertext soll unten fixiert sein*/
+.footertext{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#ababab;
+    color: white;
+    text-align: center;
+}
+
+/*Buttons sind in der Mitte der Spalte*/
+
+.buttonImp{
+    margin-top: 345%;
+    margin-left: 75%;
+}
+.home {
+    background-color: #ababab;
+    border: 2px solid #ababab;
+    border-radius: 5px;
+}
+
+.laptop {
+    background-color: #00a6d0;
+    border: 2px solid #00a6d0;
+    border-radius: 5px;
+}
+
+.smart {
+    background-color: #17618e;
+    border: 2px solid #17618e;
+    border-radius: 5px;
+}
+
+/*wie soll Seite auf zb smartphone aussehen*/
+@media only screen and (max-width: 1100px){
+    .textWerbung{
+        display: none;
+    }
+    h3{
+        display: inline;
+    }
+    .bildVideo{
+         height: 250px;
+    }
+    h1{
+     font-size: 2px;
+     }
+   
+    .buttonImp{
+        display: none;
+    }
+    .rowh{
+        display: inline;
+    }
+    
+    .rowh2{
+        display:none;
+    }
+}
+/*Kommentar 2*/
+@media only screen and (max-width: 700px){
+    .col{
+        padding: 10px;
+    }
+    .textWerbung{
+        display: none;
+    }
+    h3{
+        display: inline;
+    }
+    .logo{
+        width: 100px
+    }
+   
+    .buttonImp{
+        display: none;
+    }
+
+    .b2{
+        display: none;
+    }
+    
+    .rowh{
+        display: inline;
+    }
+    .rowh2{
+        display: inline;
+    }
+   
+    
+    .footertext{
+        position: fixed;
+         left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color:#ababab;
+        color: white;
+        text-align: center;
+        font-size: 10px;
+    }
+    .bildVideo{
+        height: 250px;
+        margin-left: 80px;
+    }
+}
