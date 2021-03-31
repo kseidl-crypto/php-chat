@@ -2,7 +2,9 @@
 //Zu tun: Passwort verschluesseln!
 //        überprüfen
 //        weiterleiten auf loggin seite
-//        Captcha
+//        Button mit "bereits account vorhanden" oder so
+
+
 
 
 
