@@ -1,3 +1,5 @@
+<!--Captcha inkludieren: https://code.tutsplus.com/tutorials/build-your-own-captcha-and-contact-form-in-php--net-5362---!>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
