@@ -9,7 +9,7 @@ $passwd = $_POST['passwort'];
 
 
 
-$user = new Registrierung();
+$user = new Benutzer();
 $user ->nachname="Herbert";
 echo "". $user -> getNachname() ;
 ?>
