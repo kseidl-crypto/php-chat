@@ -1,4 +1,5 @@
 <?php
+//https://code.tutsplus.com/tutorials/build-your-own-captcha-and-contact-form-in-php--net-5362
 //Captcha generieren
 $permitted_chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -48,6 +49,33 @@ for($i = 0; $i < 10; $i++) {
     imagerectangle($image, rand(-10, 190), rand(-10, 10), rand(-10, 190), rand(40, 60), $rect_color);
 }
 
+//Captcha zusammenstellen
+$black = imagecolorallocate($image, 0, 0, 0);
+$white = imagecolorallocate($image, 255, 255, 255);
+$textcolors = [$black, $white];
+
+$string_length = 6;
+$captcha_string = secure_generate_string($permitted_chars, $string_length);
+
+//Session übergeben, was der captchatext ist
+$_SESSION['captcha_text'] = $captcha_string;
+
+//Rand mit jeweils 15 px
+//Platz 170px ist gleichmäßig aufgeteilt
+for($i = 0; $i < $string_length; $i++) {
+    $letter_space = 170/$string_length;
+    $initial = 15;
+
+    //!!!Dateipfad überprüfen!!!"
+    //
+    //buchstaben entweder weiß oder schwarz
+    //Text bisschen rotiert
+    imagettftext($image, 20, rand(-15, 15), $initial + $i*$letter_space, rand(20, 40), $textcolors[rand(0, 1)],dirname(__FILE__).'..\Dateien\arial.ttf', $captcha_string[$i]);
+}
+
+header('Content-type: image/png');
+imagepng($image);
+imagedestroy($image);
 
 
 ?>
