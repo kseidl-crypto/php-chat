@@ -13,7 +13,7 @@
         <h1>Login</h1>
     </div>
 </div>
-<form action="./Login.php" method="POST">
+<form action="Login.php" method="POST">
     <div class="form-group">
         <label class="control-label col-sm-2" for="benutzer">Benutzername:</label>
         <div class="col-sm-10">
