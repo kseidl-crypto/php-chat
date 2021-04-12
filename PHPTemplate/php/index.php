@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -44,17 +45,17 @@
             <input type="password" class="form-control" id="passwort" placeholder="Passwort">
         </div>
     </div>
-    <div class="form-group elem-group">
-        <label class="control-label col-sm-2" for="captcha">Captcha Text:</label>
-        <div class="col-sm-10">
-            <img src="captcha.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
-            <br>
-            <input type="text" class="form-control" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}" placeholder="Captcha Text">
-        </div>
-    </div>
     <div class="form-group">
+        <script>
+            function onSubmit(token) {
+                document.getElementById("demo-form").submit();
+            }
+        </script>
         <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button class="g-recaptcha btn btn-default"
+                    data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                    data-callback='onSubmit'
+                    data-action='submit'>Submit</button>
         </div>
     </div>
 </form>
