@@ -51,6 +51,7 @@
                 document.getElementById("demo-form").submit();
             }
         </script>
+        <!-- Captcha -->
         <div class="col-sm-offset-2 col-sm-10">
             <button class="g-recaptcha btn btn-default"
                     data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
