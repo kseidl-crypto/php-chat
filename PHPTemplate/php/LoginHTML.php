@@ -17,13 +17,13 @@
     <div class="form-group">
         <label class="control-label col-sm-2" for="benutzer">Benutzername:</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="benutzer" placeholder="Benutzername">
+            <input type="text" class="form-control" id="benutzer" name="benutzer" placeholder="Benutzername">
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-sm-2" for="passwort">Passwort:</label>
         <div class="col-sm-10">
-            <input type="password" class="form-control" id="passwort" placeholder="Passwort">
+            <input type="password" class="form-control" id="passwort" name="passwort" placeholder="Passwort">
         </div>
     </div>
     <div class="form-group">
