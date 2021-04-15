@@ -14,7 +14,7 @@
         <h1>Registrierung</h1>
     </div>
 </div>
-<form action="Registrierung.php" method="POST">
+<form action="Registrierung.php" method="POST" id="registrierung">
     <div class="form-group">
         <label class="control-label col-sm-2" for="vorname">Vorname:</label>
         <div class="col-sm-10">
@@ -48,7 +48,7 @@
     <div class="form-group">
         <script>
             function onSubmit(token) {
-                document.getElementById("demo-form").submit();
+                document.getElementById("registrierung").submit();
             }
         </script>
         <!-- Captcha -->
