@@ -2,7 +2,6 @@
 //Zu tun: Passwort verschluesseln!
 //        überprüfen
 //        weiterleiten auf loggin seite
-//        Button mit "bereits account vorhanden" oder so
 
 
 
@@ -16,14 +15,14 @@ $benutzer = $_POST['benutzername'];
 $passwd = $_POST['passwort'];
 $user = array($vorname, $nachname, $email, $benutzer, $passwd, $passwd);
 
-//Schaut, ob captcha ausgefüllt wurde
+echo "$vorname $benutzer $passwd";
+//semikolon als Trennzeichen, Variablen verbinden
+$eintrag = implode(";", $user) . "\r\n";
+//!!!!!Schaun, ob es überschrieben wird!!! Und ob Dateipfad stimmt!!!
+//Ende hinzugefügt
 
-        //semikolon als Trennzeichen, Variablen verbinden
-        $eintrag = implode(";", $user) . "\r\n";
-        //!!!!!Schaun, ob es überschrieben wird!!! Und ob Dateipfad stimmt!!!
-        //Ende hinzugefügt
-        file_put_contents("../Dateien/Text.txt", $eintrag, FILE_APPEND);
-        echo "Registrierung abgeschlossen";
+file_put_contents("/Dateien/Text.txt", $eintrag, FILE_APPEND);
+echo "Registrierung abgeschlossen";
 
 
 ?>

@@ -15,7 +15,7 @@ $pw = $_POST('passwort');
 
 //laden alle Zeilen von text.txt
 //!!!Dateipfad überprüfen!!!
-$user = file("../Dateien/Text.txt");
+$user = file("/Dateien/Text.txt");
 
 //foreach um alle Einträge durchzugehen
 foreach($user AS $line){

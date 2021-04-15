@@ -14,7 +14,7 @@
         <h1>Registrierung</h1>
     </div>
 </div>
-<form action="./Registrierung.php" method="POST">
+<form action="Registrierung.php" method="POST">
     <div class="form-group">
         <label class="control-label col-sm-2" for="vorname">Vorname:</label>
         <div class="col-sm-10">
@@ -52,12 +52,19 @@
             }
         </script>
         <!-- Captcha -->
-        <div class="col-sm-offset-2 col-sm-10">
+        <!-- <div class="col-sm-offset-2 col-sm-10">
             <button class="g-recaptcha btn btn-default"
                     data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                     data-callback='onSubmit'
                     data-action='submit'>Submit</button>
-        </div>
+        </div> -->
+
+
+            <input type="submit" value="Submit">
+
+        <!-- Button für Login -->
+       <a href="LoginHTML.php">login</a>
+
     </div>
 </form>
 </body>
