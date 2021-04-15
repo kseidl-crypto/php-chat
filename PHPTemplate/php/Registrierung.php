@@ -20,8 +20,8 @@ echo "$vorname $benutzer $passwd";
 $eintrag = implode(";", $user) . "\r\n";
 //!!!!!Schaun, ob es überschrieben wird!!! Und ob Dateipfad stimmt!!!
 //Ende hinzugefügt
-
-file_put_contents("/Dateien/Text.txt", $eintrag, FILE_APPEND);
+echo $eintrag;
+file_put_contents("./Dateien/Text.txt", $eintrag, FILE_APPEND);
 echo "Registrierung abgeschlossen";
 
 
