@@ -11,7 +11,7 @@
 $vorname = $_POST['vorname'];
 $nachname = $_POST['nachname'];
 $email = $_POST['email'];
-$benutzer = $_POST['benutzername'];
+$benutzer = $_POST['benutzer'];
 $passwd = $_POST['passwort'];
 $user = array($vorname, $nachname, $email, $benutzer, $passwd);
 
@@ -20,9 +20,9 @@ $user = array($vorname, $nachname, $email, $benutzer, $passwd);
 $eintrag = implode(";", $user) . "\r\n";
 //!!!!!Schaun, ob es überschrieben wird!!! Und ob Dateipfad stimmt!!!
 //Ende hinzugefügt
-echo $eintrag;
+
 file_put_contents("./Dateien/Text.txt", $eintrag, FILE_APPEND);
 echo "Registrierung abgeschlossen";
-
+header('Location:localhost/LoginHTML.php');
 
 ?>
