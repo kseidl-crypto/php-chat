@@ -18,7 +18,7 @@ $pw2 = $_POST['passwort2'];
 $user = file("Dateien/Text.txt");
 
 echo $pw2;
-
+echo '<a href="ChatHTML.php">Login</a>';
 $bool = false;
 //foreach um alle Einträge durchzugehen
 foreach($user AS $line){
