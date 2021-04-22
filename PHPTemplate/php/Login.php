@@ -6,24 +6,40 @@
 //
 
 
-session_start();
 
 //überprüfung durch benutzernamen und passwort
+session_start();
 
-$benutzer = $_POST('benutzer');
-$pw = $_POST('passwort');
+$benutzer2 = $_POST['benutzer2'];
+$pw2 = $_POST['passwort2'];
 
 //laden alle Zeilen von text.txt
 //!!!Dateipfad überprüfen!!!
-$user = file("/Dateien/Text.txt");
+$user = file("Dateien/Text.txt");
 
+echo $pw2;
+
+$bool = false;
 //foreach um alle Einträge durchzugehen
 foreach($user AS $line){
+
     //Teilen bei Semikolon bei Line
     $userInfo = explode(";", $line);
-    if($userInfo[0] == $benutzer AND $userInfo[1] == $pw){
-      header("Location: ChatHTML.php");
+   echo $userInfo[2].$userInfo[4];
+   $upw = $userInfo[4];
+   $uben = $userInfo[2];
+
+    if(($pw2 == $upw)){
+
+        $bool = true;
+
+    }
+    else{
+
+       // echo 'Falsches Passwort oder Email';
     }
 }
 
+
+echo $bool;
 ?>

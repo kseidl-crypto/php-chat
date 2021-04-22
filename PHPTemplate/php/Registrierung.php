@@ -23,6 +23,6 @@ $eintrag = implode(";", $user) . "\r\n";
 
 file_put_contents("./Dateien/Text.txt", $eintrag, FILE_APPEND);
 echo "Registrierung abgeschlossen";
-header('Location:localhost/LoginHTML.php');
+echo '<a href="LoginHTML.php">Login</a>';
 
 ?>
