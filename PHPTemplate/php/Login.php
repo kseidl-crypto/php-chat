@@ -17,29 +17,27 @@ $pw2 = $_POST['passwort2'];
 //!!!Dateipfad überprüfen!!!
 $user = file("Dateien/Text.txt");
 
-echo $pw2;
-echo '<a href="ChatHTML.php">Login</a>';
+
 $bool = false;
 //foreach um alle Einträge durchzugehen
 foreach($user AS $line){
 
     //Teilen bei Semikolon bei Line
     $userInfo = explode(";", $line);
-   echo $userInfo[2].$userInfo[4];
-   $upw = $userInfo[4];
-   $uben = $userInfo[2];
 
-    if(($pw2 == $upw)){
+   $upw = str_replace(array("\r","\n"), "", $userInfo[4]);
+   $uben = str_replace(array("\r","\n"), "", $userInfo[2]);
 
-        $bool = true;
-
+    if(($pw2 == $upw)&&($uben == $benutzer2)){
+        $bool =true;
     }
-    else{
 
-       // echo 'Falsches Passwort oder Email';
-    }
+
 }
-
-
-echo $bool;
+if($bool){
+    echo '<a href="ChatHTML.php">Chat</a>';
+}
+else{
+    echo 'Falsches Passwort oder falsche Email';
+}
 ?>
