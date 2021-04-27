@@ -35,7 +35,10 @@ foreach($user AS $line){
 
 }
 if($bool){
-    echo '<a href="ChatHTML.php">Chat</a>';
+
+    //!!!Variablen übergeben
+    echo '<a href="ChatHTML.php?benutzer=benutzer2?">Chat</a>';
+    echo '<input type="hidden" name="daten" value="<?php echo $benutzer2; ?>" />';
 }
 else{
     echo 'Falsches Passwort oder falsche Email';
