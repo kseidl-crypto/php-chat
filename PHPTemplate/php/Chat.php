@@ -4,7 +4,8 @@
 
 date_default_timezone_set("Europe/Vienna");
 
-$benutzer = $_POST('benutzer');
+$benutzer = $_SESSION('benutzer');
+echo $benutzer;
 $time = time();
 $datum = date("d.m.Y",$time);
 $uhrzeit = date("H:i",$time);

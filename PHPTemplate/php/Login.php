@@ -19,6 +19,10 @@ $user = file("Dateien/Text.txt");
 
 
 $bool = false;
+
+//Session
+$_SESSION['benutzer']= $_POST['benutzer2'];
+
 //foreach um alle Einträge durchzugehen
 foreach($user AS $line){
 
@@ -38,7 +42,8 @@ if($bool){
 
     //!!!Variablen übergeben
     echo '<a href="ChatHTML.php?benutzer=benutzer2?">Chat</a>';
-    echo '<input type="hidden" name="daten" value="<?php echo $benutzer2; ?>" />';
+    echo '<br>';
+    echo ' <a href="Umfrage/UmfrageHTML.php">Umfrage erstellen</a>';
 }
 else{
     echo 'Falsches Passwort oder falsche Email';

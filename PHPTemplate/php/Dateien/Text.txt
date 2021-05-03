@@ -1,8 +1,2 @@
-Katja;Seidl;rodlerkatse@gmail.com;;hi
-Katja;Seidl;hallo@gmail.com;hallo;hi
-Katja;Seidl;rodlerkatse@gmail.com;hallo;
 Katja;Seidl;rodlerkatse@gmail.com;hallo;hi
-Katja;Seidl;rodlerkatse@gmail.com;hallo;
-Katja;Seidl;rodlerkatse@gmail.com;hallo;hi
-Katja;Seidl;rodlerkatse@gmail.com;hallo;hi
-Katja;Seidl;rodlerkatse@gmail.com;hallo;hi
+
