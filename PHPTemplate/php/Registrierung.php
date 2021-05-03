@@ -14,7 +14,7 @@ $nachname = $_POST['nachname'];
 $email = $_POST['email'];
 $benutzer = $_POST['benutzer'];
 $pass= $_POST['passwort'];
-$passwd = password_hash($pass, 2);
+$passwd = password_hash($pass, PASSWORD_DEFAULT);
 $user = array($vorname, $nachname, $email, $benutzer, $passwd);
 
 
