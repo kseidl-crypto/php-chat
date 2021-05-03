@@ -30,9 +30,10 @@ foreach($user AS $line){
     $userInfo = explode(";", $line);
 
    $upw = str_replace(array("\r","\n"), "", $userInfo[4]);
+
    $uben = str_replace(array("\r","\n"), "", $userInfo[2]);
 
-    if(($pw2 == $upw)&&($uben == $benutzer2)){
+    if((password_verify($pw2,$upw))&&($uben == $benutzer2)){
         $bool =true;
     }
 

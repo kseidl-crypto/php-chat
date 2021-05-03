@@ -7,12 +7,14 @@
 
 
 
+
 //Wert von index-seite geholt und in Variablen gespeichert
 $vorname = $_POST['vorname'];
 $nachname = $_POST['nachname'];
 $email = $_POST['email'];
 $benutzer = $_POST['benutzer'];
-$passwd = $_POST['passwort'];
+$pass= $_POST['passwort'];
+$passwd = password_hash($pass, 2);
 $user = array($vorname, $nachname, $email, $benutzer, $passwd);
 
 
