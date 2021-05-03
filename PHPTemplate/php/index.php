@@ -59,6 +59,7 @@
                     data-action='submit'>Submit</button>
         </div> -->
 
+        <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
 
             <input type="submit" value="Submit">
 

@@ -1,12 +1,13 @@
 <?php
-//Zu tun: Passwort verschluesseln!
-//        überprüfen
-//        weiterleiten auf loggin seite
 
 
 
 
 
+$json = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe&response='.$_POST['g-recaptcha-response']);
+$data = json_decode($json);
+
+//var_dump($data);
 
 //Wert von index-seite geholt und in Variablen gespeichert
 $vorname = $_POST['vorname'];
