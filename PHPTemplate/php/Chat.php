@@ -4,28 +4,24 @@
 
 date_default_timezone_set("Europe/Vienna");
 
-$benutzer = $_SESSION('benutzer');
+$benutzer = $_SESSION['benutzer'];
 echo $benutzer;
 $time = time();
 $datum = date("d.m.Y",$time);
 $uhrzeit = date("H:i",$time);
-$text = $_POST('text');
+$text = $_POST['text'];
 
 //in einen String alle Werte gespeichert
 //voherigen Werte dazugehängt
-$text = file_get_contents('../Dateien/Nachrichten.txt')."$datum\n$benutzer, $time - \"$text\"\n";
+$text = file_get_contents('./Dateien/Nachrichten.txt')."$datum\n$benutzer, $time - \"$text\"\n";
 
 
-$handle = fopen('test.txt',"r+" );
-//in File text geschrieben
-fwrite($handle, $text);
-
-
-fclose($handle);
+file_put_contents('./Dateien/Nachrichten.txt', "$datum\n$benutzer, $time - \"$text\"\n",
+    FILE_APPEND);
 
 
 //Text ausgegeben
-echo file_get_contents('test.txt');
+echo file_get_contents('./Dateien/Nachrichten.txt');
 
 
 ?>

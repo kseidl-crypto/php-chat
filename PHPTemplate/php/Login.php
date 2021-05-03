@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //Zu tun: Session
 //        passwort entschluesseln
 //        zu Chat weiterleiten
@@ -8,7 +8,6 @@
 
 
 //überprüfung durch benutzernamen und passwort
-session_start();
 
 $benutzer2 = $_POST['benutzer2'];
 $pw2 = $_POST['passwort2'];
