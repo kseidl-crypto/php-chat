@@ -19,33 +19,39 @@ $user = file("Dateien/Text.txt");
 
 $bool = false;
 
-//Session
-$_SESSION['benutzer']= $_POST['benutzer2'];
+if($benutzer2 != null && $pw2 != null){
+    //Session
+    $_SESSION['benutzer']= $_POST['benutzer2'];
 
 //foreach um alle Einträge durchzugehen
-foreach($user AS $line){
+    foreach($user AS $line){
 
-    //Teilen bei Semikolon bei Line
-    $userInfo = explode(";", $line);
+        //Teilen bei Semikolon bei Line
+        $userInfo = explode(";", $line);
 
-   $upw = str_replace(array("\r","\n"), "", $userInfo[4]);
+        $upw = str_replace(array("\r","\n"), "", $userInfo[4]);
 
-   $uben = str_replace(array("\r","\n"), "", $userInfo[2]);
+        $uben = str_replace(array("\r","\n"), "", $userInfo[2]);
 
-    if((password_verify($pw2,$upw))&&($uben == $benutzer2)){
-        $bool =true;
+        if((password_verify($pw2,$upw))&&($uben == $benutzer2)){
+            $bool =true;
+        }
+
+
     }
+    if($bool){
 
-
-}
-if($bool){
-
-    //!!!Variablen übergeben
-    echo '<a href="ChatHTML.php?benutzer=benutzer2?">Chat</a>';
-    echo '<br>';
-    echo ' <a href="Umfrage/UmfrageHTML.php">Umfrage erstellen</a>';
+        //!!!Variablen übergeben
+        echo '<a href="ChatHTML.php?benutzer=benutzer2?">Chat</a>';
+        echo '<br>';
+        echo ' <a href="Umfrage/UmfrageHTML.php">Umfrage erstellen</a>';
+    }
+    else{
+        echo 'Falsches Passwort oder falsche Email';
+    }
 }
 else{
-    echo 'Falsches Passwort oder falsche Email';
+    echo "nicht ausgefüllt";
 }
+
 ?>

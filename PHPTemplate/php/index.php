@@ -45,6 +45,10 @@
             <input type="password" class="form-control" id="passwort" name="passwort" placeholder="Passwort">
         </div>
     </div>
+    <input type="submit" value="Submit">
+
+    <!-- Button für Login -->
+    <a href="LoginHTML.php">login</a>
     <div class="form-group">
         <script>
             function onSubmit(token) {
@@ -61,10 +65,7 @@
 
         <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
 
-            <input type="submit" value="Submit">
 
-        <!-- Button für Login -->
-       <a href="LoginHTML.php">login</a>
 
     </div>
 </form>
