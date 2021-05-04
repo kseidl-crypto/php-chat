@@ -1,4 +1,5 @@
 <?php
+session_start();
 //Zu tun: mit JS aktualisierung des Clientens
 //        Benutzer von der anderen Seite holen
 
@@ -27,5 +28,3 @@ function nachrichten(){
 }
 
 
-
-?>

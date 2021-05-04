@@ -19,9 +19,6 @@ $user = file("Dateien/Text.txt");
 
 $bool = false;
 
-//Session
-$_SESSION['benutzer']= $_POST['benutzer2'];
-
 //foreach um alle Einträge durchzugehen
 foreach($user AS $line){
 
@@ -36,8 +33,12 @@ foreach($user AS $line){
         $bool =true;
     }
 
+    //Session
+    $_SESSION['benutzer']= $userInfo[3];
 
 }
+
+
 if($bool){
 
     //!!!Variablen übergeben
