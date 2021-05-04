@@ -21,7 +21,11 @@ file_put_contents('./Dateien/Nachrichten.txt', "$datum\n$benutzer, $time - \"$te
 
 
 //Text ausgegeben
-echo file_get_contents('./Dateien/Nachrichten.txt');
+function nachrichten(){
+    ob_end_clean();
+    echo file_get_contents('./Dateien/Nachrichten.txt');
+}
+
 
 
 ?>
