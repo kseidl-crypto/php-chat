@@ -1,11 +1,25 @@
 version: "3.9"
 
 services:
-  php-template:
-    build: .
+  php:
+    build: Docker_PhP/.
     volumes:
       - ./php:/var/www/html
     ports:
       - 80:80
+  mysql:
+    build: Docker_MySQL/.
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: umfrage
+      MYSQL_PASSWORD: umfrage
+      MYSQL_DATABASE: umfrage
+      TZ: Europe/Vienna
+    volumes:
+      - ./db_setup/startup.sql:/docker-entrypoint-initdb.d/startup.sql
+      - mysql_data:/var/lib/mysql
+    ports:
+      - 3306:3306
 volumes:
-  files:
+  mysql_data:
