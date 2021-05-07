@@ -21,9 +21,9 @@ $conn->query($var);
 //alle zeile -> Array zurück
 //$benutzer = $conn->query('SELECT * from user')->fetchAll();
 
-//
+//Max ist letzter Eintrag
 
-$id = $conn->query('Select Count(ID) from umfrage.umfrage1')->fetch();
+$id = $conn->query('Select MAX(ID) from umfrage.umfrage1')->fetch();
 
 
 echo '<a href="UmfrageFormular.php?id='.$id[0].'">Abschicken</a>';

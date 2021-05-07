@@ -1,5 +1,5 @@
 <?php
-//Umfrage für andere anzeigen lassen
+
 include '../Dateien/db_connection.php';
 $conn = OpenCon();
 $id = $_GET['id'];
@@ -7,7 +7,7 @@ $id = $_GET['id'];
 //intval($id);
 //echo $id;
 
-$um = $conn->query('Select frage, option1, option2, option3 from umfrage.umfrage1 where ID = '.$id)->fetchAll()[0];
+$um = $conn->query('Select frage, option1, option2, option3, Antwort1, Antwort2, Antwort3 from umfrage.umfrage1 where ID = '.$id)->fetchAll()[0];
 
 
 
@@ -15,7 +15,10 @@ $frage = $um[0];
 $option1 = $um[1];
 $option2 = $um[2];
 $option3 = $um[3];
-
+$a1 = $um[4];
+$a2 = $um[5];
+$a3 = $um[6];
+var_dump($um);
 if($id !=null) {
     if($id <= $conn->query('Select MAX(ID) from umfrage.umfrage1')->fetch()[0]){
         echo ' 
@@ -34,7 +37,7 @@ if($id !=null) {
         <h1>Umfrage</h1>
     </div>
 </div>
-<form action="UmfrageAuswertung.php?id='.$id.'" method="POST">
+
     <div class="form-group">
         <label class="control-label col-sm-2" >'.$frage.'</label>
     </div>
@@ -42,29 +45,24 @@ if($id !=null) {
     <div class="form-group">
         <label class="control-label col-sm-2" >'.$option1.'</label>
         <div class="col-sm-10">
-            <input type="radio" class="form-control" id="option1" name="radiob">
+            <label>'.$a1.'</label>
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-sm-2" >'.$option2.'</label>
         <div class="col-sm-10">
-            <input type="radio" class="form-control" id="option2" name="radiob">
+            <label>'.$a2.'</label>
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-sm-2" >'.$option3.'</label>
         <div class="col-sm-10">
-            <input type="radio" class="form-control" id="option3" name="radiob">
+           <label>'.$a3.'</label>
         </div>
     </div>
     
-    <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Submit</button>
+   
 
-        </div>
-    </div>
-</form>
 ';
     }
     else{
@@ -74,7 +72,5 @@ if($id !=null) {
 else{
     echo 'Pech';
 }
-
-
 
 ?>
