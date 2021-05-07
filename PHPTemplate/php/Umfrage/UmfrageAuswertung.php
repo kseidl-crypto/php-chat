@@ -4,7 +4,7 @@ $conn = OpenCon();
 
 $id = $_GET['id'];
 $option = $_POST['radiob'];
-
+//echo $option;
 if($option == 'option1'){
     $a = $conn->query('Select Antwort1 from umfrage.umfrage1 Where ID = '.$id)->fetch()[0]+1;
     $conn->query('Update umfrage.umfrage1 Set Antwort1 = '.$a.' WHERE ID = '.$id);

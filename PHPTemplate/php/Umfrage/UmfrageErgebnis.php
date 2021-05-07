@@ -8,7 +8,7 @@ $id = $_GET['id'];
 //echo $id;
 
 $um = $conn->query('Select frage, option1, option2, option3, Antwort1, Antwort2, Antwort3 from umfrage.umfrage1 where ID = '.$id)->fetchAll()[0];
-
+//var_dump($um);
 
 
 $frage = $um[0];
@@ -18,7 +18,7 @@ $option3 = $um[3];
 $a1 = $um[4];
 $a2 = $um[5];
 $a3 = $um[6];
-var_dump($um);
+//var_dump($um);
 if($id !=null) {
     if($id <= $conn->query('Select MAX(ID) from umfrage.umfrage1')->fetch()[0]){
         echo ' 
@@ -66,11 +66,11 @@ if($id !=null) {
 ';
     }
     else{
-        echo 'Pech';
+        echo 'Pech :P';
     }
 }
 else{
-    echo 'Pech';
+    echo 'Pech :P';
 }
 
 ?>

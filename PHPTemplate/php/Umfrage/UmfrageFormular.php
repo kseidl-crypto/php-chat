@@ -42,19 +42,19 @@ if($id !=null) {
     <div class="form-group">
         <label class="control-label col-sm-2" >'.$option1.'</label>
         <div class="col-sm-10">
-            <input type="radio" class="form-control" id="option1" name="radiob">
+            <input type="radio" class="form-control" id="option1" value="option1" name="radiob">
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-sm-2" >'.$option2.'</label>
         <div class="col-sm-10">
-            <input type="radio" class="form-control" id="option2" name="radiob">
+            <input type="radio" class="form-control" id="option2" value="option2" name="radiob">
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-sm-2" >'.$option3.'</label>
         <div class="col-sm-10">
-            <input type="radio" class="form-control" id="option3" name="radiob">
+            <input type="radio" class="form-control" id="option3" value="option3" name="radiob">
         </div>
     </div>
     
@@ -68,11 +68,11 @@ if($id !=null) {
 ';
     }
     else{
-        echo 'Pech';
+        echo 'Pech :P';
     }
 }
 else{
-    echo 'Pech';
+    echo 'Pech :P';
 }
 
 
