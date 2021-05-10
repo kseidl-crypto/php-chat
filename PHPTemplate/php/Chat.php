@@ -42,8 +42,7 @@ file_put_contents("./Dateien/Nachrichten.txt","\n$benutzer||$datum||$text", FILE
 
   <form action="Chat.php" method="POST">
       <div class="form-group">
-          <label class="control-label col-sm-2" >Text:</label>
-          <div class="col-sm-10">
+          <div class="col-12">
               <input type="text" class="form-control" id="wtext" name="wtext" placeholder="...">
           </div>
       </div>
