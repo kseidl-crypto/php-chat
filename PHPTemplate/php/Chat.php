@@ -23,6 +23,12 @@ file_put_contents("./Dateien/Nachrichten.txt","\n$benutzer||$datum||$text", FILE
   <script src="./js/JSChat.js"></script>
 </head>
 <body  onload="setup()">
+<div class="container" id="messages">
+    <div class="row" id="header">
+        <a href="Chat.php" class="col">Chat</a>
+        <a href="./Umfrage/UmfrageHTML.php" class="col">Umfragen</a>
+    </div>
+</div>
   <div class="container" id="messages">
     <div class="row mes">
       <div class="col-12">

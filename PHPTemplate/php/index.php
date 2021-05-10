@@ -5,10 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/chat.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
+<div class="container" id="messages">
+    <div class="row" id="header">
+        <a href="Chat.php" class="col">Chat</a>
+        <a href="./Umfrage/UmfrageHTML.php" class="col">Umfragen</a>
+    </div>
 <div class="row">
     <div class="col-sm-1">
         <h1>Registrierung</h1>
@@ -69,5 +75,6 @@
 
     </div>
 </form>
+</div>
 </body>
 </html>
