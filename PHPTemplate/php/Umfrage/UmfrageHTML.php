@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/chat.css">
 </head>
 <body>
-<div class="container" id="messages">
+<div class="container">
     <div class="row" id="header">
         <a href="Chat.php" class="col">Chat</a>
         <a href="./Umfrage/UmfrageHTML.php" class="col">Umfragen</a>

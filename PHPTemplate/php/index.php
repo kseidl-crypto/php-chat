@@ -10,11 +10,7 @@
 </head>
 
 <body>
-<div class="container" id="messages">
-    <div class="row" id="header">
-        <a href="Chat.php" class="col">Chat</a>
-        <a href="./Umfrage/UmfrageHTML.php" class="col">Umfragen</a>
-    </div>
+<div class="container">
 <div class="row">
     <div class="col-sm-1">
         <h1>Registrierung</h1>
