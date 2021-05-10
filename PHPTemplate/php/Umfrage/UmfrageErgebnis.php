@@ -7,7 +7,15 @@ $id = $_GET['id'];
 //intval($id);
 //echo $id;
 
-$um = $conn->query('Select frage, option1, option2, option3, Antwort1, Antwort2, Antwort3 from umfrage.umfrage1 where ID = '.$id)->fetchAll()[0];
+$um = $conn->query('Select frage, 
+                            option1, 
+                            option2, 
+                            option3, 
+                            Antwort1, 
+                            Antwort2, 
+                            Antwort3 
+                            from umfrage.umfrage1 
+                            where ID = '.$id)->fetchAll()[0];
 //var_dump($um);
 
 
@@ -22,47 +30,33 @@ $a3 = $um[6];
 if($id !=null) {
     if($id <= $conn->query('Select MAX(ID) from umfrage.umfrage1')->fetch()[0]){
         echo ' 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Umfrage erstellen</title>
+    <title>Umfrage Ergebnisse</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
-
 <body>
-<div class="row">
-    <div class="col-sm-1">
-        <h1>Umfrage</h1>
-    </div>
-
-    <div class="form-group">
-        <label class="control-label col-sm-2" >'.$frage.'</label>
-    </div>
-    
-    </div>
-    <div class="form-group">
-        <label class="control-label col-sm-2" >'.$option1.'</label>
-        <div class="col-sm-10">
-            <label>'.$a1.'</label>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Umfrage - '.$frage.'</h1>
         </div>
     </div>
-    <div class="form-group">
-        <label class="control-label col-sm-2" >'.$option2.'</label>
-        <div class="col-sm-10">
-            <label>'.$a2.'</label>
-        </div>
+    <div class="row">
+        <p class="col-1" >'.$option1.' - '.$a1.'</p>
     </div>
-    <div class="form-group">
-        <label class="control-label col-sm-2" >'.$option3.'</label>
-        <div class="col-sm-10">
-           <label>'.$a3.'</label>
-        </div>
+    <div class="row">
+        <p class="col-1" >'.$option2.' - '.$a2.'</p>
     </div>
-    
-   
-
+    <div class="row">
+        <p class="col-1" >'.$option3.' - '.$a3.'</p>
+    </div>
+</div>
+</body>
+</html>
 ';
     }
     else{
@@ -72,5 +66,3 @@ if($id !=null) {
 else{
     echo 'Pech :P';
 }
-
-?>
