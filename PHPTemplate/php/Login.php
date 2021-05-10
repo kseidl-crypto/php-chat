@@ -42,7 +42,7 @@ if($benutzer2 != null && $pw2 != null){
     if($bool){
 
         //!!!Variablen übergeben
-        echo '<a href="ChatHTML.php?benutzer=benutzer2?">Chat</a>';
+        echo '<a href="Chat.php">Chat</a>';
         echo '<br>';
         echo ' <a href="Umfrage/UmfrageHTML.php">Umfrage erstellen</a>';
     }
@@ -53,5 +53,4 @@ if($benutzer2 != null && $pw2 != null){
 else{
     echo "nicht ausgefüllt";
 }
-
 ?>

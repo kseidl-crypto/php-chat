@@ -35,7 +35,8 @@ function chat(){
                     "      </div>\n";
                 con.appendChild(cont);
             }
-        }
+        },
+        cache: false
     });
 }
 
