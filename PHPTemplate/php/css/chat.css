@@ -1,0 +1,14 @@
+.mes{
+    border-top: solid black 2px;
+    border-bottom: solid black 2px;
+}
+
+.mtext{
+    border-top: solid black 1px;
+    margin-top: 0;
+}
+
+.mheader{
+    font-weight: bold !important;
+    margin-bottom: 0;
+}
