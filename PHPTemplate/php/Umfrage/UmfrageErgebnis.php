@@ -36,12 +36,12 @@ if($id !=null) {
     <div class="col-sm-1">
         <h1>Umfrage</h1>
     </div>
-</div>
 
     <div class="form-group">
         <label class="control-label col-sm-2" >'.$frage.'</label>
     </div>
     
+    </div>
     <div class="form-group">
         <label class="control-label col-sm-2" >'.$option1.'</label>
         <div class="col-sm-10">

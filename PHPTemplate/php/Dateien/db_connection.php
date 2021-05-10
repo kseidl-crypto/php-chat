@@ -1,7 +1,7 @@
 <?php
 function OpenCon()
 {
-    $dbhost = "172.16.42.15";   //Deine IP-Adresse statt dbhost
+    $dbhost = "10.0.105.159";   //Deine IP-Adresse statt dbhost
     $dbuser = "umfrage";
     $dbpass = "umfrage";
     $db = "umfrage";
